@@ -1,6 +1,6 @@
 const Skills = () => {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section reveal">
       <h3>Skills</h3>
 
       <div className="skills-grid">

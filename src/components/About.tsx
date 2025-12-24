@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section reveal">
       <h3>About</h3>
 
       <p>
@@ -8,7 +8,7 @@ const About = () => {
         production‑ready software. I focus on clear architecture, small composable pieces, and
         code that another developer can understand and extend without friction.
       </p>
-      
+
       <p>
         On the frontend, I work primarily with React and TypeScript to build focused, minimal
         interfaces that prioritize clarity and usability. On the backend, I’ve delivered APIs

@@ -11,11 +11,12 @@ const Navbar = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActive(entry.target.id);
+            entry.target.classList.add("visible");
           }
         });
       },
       {
-        threshold: 0.6, // works beautifully with snap-scroll
+        threshold: 0.6,
       }
     );
 
