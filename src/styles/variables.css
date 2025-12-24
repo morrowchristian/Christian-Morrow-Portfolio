@@ -1,0 +1,21 @@
+/* ============================================================
+   VARIABLES
+   ------------------------------------------------------------
+   Global design tokens for color, spacing, typography, and
+   behavior. Updating these values updates the entire system.
+============================================================ */
+
+:root {
+  --bg: #f9f9fb;
+  --text: #1a1a1a;
+  --subtle-text: #555;
+  --accent: #3b82f6;
+  --accent-light: #e0ecff;
+  --border: #e5e5e5;
+
+  --radius: 8px;
+  --transition: 180ms ease;
+
+  --max-width: 900px;
+  --section-padding: 2rem;
+}

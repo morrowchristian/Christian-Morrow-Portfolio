@@ -1,0 +1,46 @@
+/* ============================================================
+   PROXIMITY NAV (Dock-Style Interaction)
+   ------------------------------------------------------------
+   Cursor-aware navigation system that scales links based on
+   proximity. JS updates CSS variables for dynamic behavior.
+============================================================ */
+
+.proximity-nav {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.6rem;
+  z-index: 1000;
+}
+
+.proximity-nav ul {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.proximity-nav a {
+  position: relative;
+  display: inline-block;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  transform-origin: center bottom;
+}
+
+/* Proximity scaling logic */
+.proximity-nav a {
+  --distance: calc(abs(var(--cursor-x) - (var(--item-x))) * 1px);
+  --scale: calc(1 + max(0, (120 - var(--distance)) / 600));
+  transform: scale(var(--scale));
+  opacity: calc(0.75 + (var(--scale) - 1) * 1.2);
+}
+
+.proximity-nav a:hover {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proximity-nav a {
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

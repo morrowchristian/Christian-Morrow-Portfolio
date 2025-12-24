@@ -1,0 +1,58 @@
+/* ============================================================
+   NAVIGATION (Sticky Top Nav)
+   ------------------------------------------------------------
+   Styles for the primary navigation bar, including active
+   link states and underline transitions.
+============================================================ */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+nav a {
+  position: relative;
+  padding-bottom: 4px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a.active-link {
+  color: var(--accent);
+}
+
+nav a.active-link::after {
+  width: 100%;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
