@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <>
+       <div id="progress-bar"></div>
       <Navbar />
 
       <Hero />
