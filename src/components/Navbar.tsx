@@ -43,6 +43,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    // Enable keyboard navigation between snap-scroll panels.
+    // ArrowDown moves to the next section; ArrowUp moves to the previous one.
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+
+      const sections = Array.from(document.querySelectorAll("section"));
+      const currentIndex = sections.findIndex(
+        (s) => s.id === active
+      );
+
+      if (e.key === "ArrowDown" && currentIndex < sections.length - 1) {
+        sections[currentIndex + 1].scrollIntoView({ behavior: "smooth" });
+      }
+
+      if (e.key === "ArrowUp" && currentIndex > 0) {
+        sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
+
   return (
     <nav>
       <ul>
