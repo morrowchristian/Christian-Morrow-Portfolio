@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Keep an up‑to‑date reference to the active section without re‑binding listeners.
   const activeRef = useRef(active);
@@ -76,55 +77,41 @@ const Navbar = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  // Close menu when selecting a link
+  const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="#hero"
-            className={active === "hero" ? "active-link" : ""}
-          >
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#about"
-            className={active === "about" ? "active-link" : ""}
-          >
-            About
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#skills"
-            className={active === "skills" ? "active-link" : ""}
-          >
-            Skills
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#projects"
-            className={active === "projects" ? "active-link" : ""}
-          >
-            Projects
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#contact"
-            className={active === "contact" ? "active-link" : ""}
-          >
-            Contact
-          </a>
-        </li>
+    <nav className="nav-container">
+      {/* Desktop navigation */}
+      <ul className="nav-desktop">
+        <li><a href="#hero" className={active === "hero" ? "active-link" : ""}>Home</a></li>
+        <li><a href="#about" className={active === "about" ? "active-link" : ""}>About</a></li>
+        <li><a href="#skills" className={active === "skills" ? "active-link" : ""}>Skills</a></li>
+        <li><a href="#projects" className={active === "projects" ? "active-link" : ""}>Projects</a></li>
+        <li><a href="#contact" className={active === "contact" ? "active-link" : ""}>Contact</a></li>
       </ul>
+
+      {/* Mobile trigger: single-line signal bar */}
+      <button
+        className={`signal-toggle ${menuOpen ? "open" : ""}`}
+        aria-expanded={menuOpen}
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span className="signal-bar"></span>
+      </button>
+
+      {/* Mobile menu */}
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <a href="#hero" onClick={handleNavClick}>Home</a>
+        <a href="#about" onClick={handleNavClick}>About</a>
+        <a href="#skills" onClick={handleNavClick}>Skills</a>
+        <a href="#projects" onClick={handleNavClick}>Projects</a>
+        <a href="#contact" onClick={handleNavClick}>Contact</a>
+      </div>
+
+      {/* Soft focus background effect */}
+      <div className={`focus-overlay ${menuOpen ? "open" : ""}`}></div>
     </nav>
   );
 };
