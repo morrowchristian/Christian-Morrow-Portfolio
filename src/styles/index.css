@@ -1,0 +1,17 @@
+/* ============================================================
+   GLOBAL STYLES ENTRY POINT
+   ------------------------------------------------------------
+   Imports all modular CSS files in the correct order to build
+   the full design system.
+============================================================ */
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./base.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./animations.css";
+@import "./navigation.css";
+@import "./proximity-nav.css";
+@import "./mobile-menu.css";
+@import "./components.css";

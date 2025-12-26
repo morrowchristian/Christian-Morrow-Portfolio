@@ -1,0 +1,15 @@
+/* ============================================================
+   TYPOGRAPHY
+   ------------------------------------------------------------
+   Global heading and text styles. Defines hierarchy and
+   consistent vertical rhythm across the site.
+============================================================ */
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; margin-bottom: 1.5rem; }

@@ -1,0 +1,22 @@
+/* ============================================================
+   RESET
+   ------------------------------------------------------------
+   Removes browser defaults and normalizes base element
+   behavior. No project-specific styling belongs here.
+============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

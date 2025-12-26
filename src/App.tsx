@@ -1,27 +1,24 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 import ScrollToTop from "./components/ScrollToTop";
-import DarkModeToggle from "./components/DarkModeToggle";
 
-function App() {
+const App = () => {
   return (
-    <div className="app-container">
+    <>
+       <div id="progress-bar"></div>
       <Navbar />
-      <DarkModeToggle />
-      <Hero />
+
       <About />
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
+
       <ScrollToTop />
-    </div>
+    </>
   );
-}
+};
 
 export default App;
