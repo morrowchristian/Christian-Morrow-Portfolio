@@ -1,27 +1,209 @@
 /* ============================================================
-   LAYOUT
+   LAYOUT — GLOBAL SECTION STRUCTURE
    ------------------------------------------------------------
-   Snap-scroll layout tuned for tall header.
-   Starts at #about. No hero section.
+   Shared spacing, max-width, and vertical rhythm for all sections.
 ============================================================ */
 
 section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+  padding: 5rem 1.5rem;
   margin: 0 auto;
   max-width: var(--max-width);
-
-  scroll-margin-top: 12rem;
-  padding-top: 8rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 section p + p {
   margin-top: 1.2rem;
+}
+
+section + section {
+  margin-top: 3rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.about-grid,
+.skills-grid,
+.projects-grid {
+  margin-top: 2.5rem;
+}
+
+/* ============================================================
+   ABOUT SECTION
+============================================================ */
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.about-block p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+
+/* ============================================================
+   SKILLS SECTION
+============================================================ */
+
+.skills {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.skills-grid h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  padding: 0.25rem 0;
+  color: var(--subtle-text);
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+
+/* ============================================================
+   PROJECTS SECTION
+============================================================ */
+
+.projects {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Card */
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Hover elevation */
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+/* Image */
+.project-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+/* Image zoom on hover */
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Text */
+.project-tagline {
+  color: var(--subtle-text);
+  margin-bottom: 1rem;
+}
+
+.tech-list {
+  font-size: 0.9rem;
+  color: var(--subtle-text);
+}
+
+
+
+/* ============================================================
+   CONTACT SECTION
+============================================================ */
+
+.contact {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.6rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-list a:hover {
+  color: var(--text);
 }
