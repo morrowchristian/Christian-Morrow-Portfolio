@@ -1,11 +1,11 @@
 const Contact = () => {
   return (
-    <section id="contact" className="section reveal">
-      <h3>Contact</h3>
+    <section id="contact" className="section contact reveal">
+      <h2>Contact</h2>
 
       <p>If you’d like to get in touch, here are the best ways to reach me:</p>
 
-      <ul>
+      <ul className="contact-list">
         <li>
           <a href="mailto:morrowchristian@icloud.com">
             morrowchristian@icloud.com
