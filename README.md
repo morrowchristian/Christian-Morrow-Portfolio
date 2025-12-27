@@ -58,7 +58,7 @@ This structure makes it easy to add new sections, animations, or components with
 
 ## 🚀 Development Workflow
 
-This project follows a professional Git workflow:
+This portfolio project follows a professional Git workflow:
 
 - Feature branches for isolated development  
 - Pull requests for review and merge clarity  
