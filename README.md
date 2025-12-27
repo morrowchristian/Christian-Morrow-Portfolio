@@ -117,4 +117,4 @@ Planned enhancements:
 
 ## 📄 License
 
-This project is open-source under the MIT License.
+This portfolio project is open-source under the MIT License.
