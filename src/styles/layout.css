@@ -11,8 +11,7 @@ section + section {
 }
 
 .projects-grid,
-.about-grid,
-.skills-grid {
+.about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--grid-gap);
@@ -26,8 +25,7 @@ section + section {
   }
 
   .projects-grid,
-  .about-grid,
-  .skills-grid {
+  .about-grid {
     grid-template-columns: 1fr;
   }
 }
