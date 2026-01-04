@@ -1,7 +1,13 @@
 /* src/styles/Home.css */
 
-.featured-section {
-  padding: 2rem 1rem;
+.featured-section { 
+    padding: 4rem 1rem; 
+    max-width: 1200px; 
+    margin:0 auto; 
+}
+
+.featured-section h2 {
+    margin-bottom: 1.5rem; 
 }
 
 .featured-grid {

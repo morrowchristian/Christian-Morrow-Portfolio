@@ -10,6 +10,7 @@ const Home = () => {
       <HeroSection />
       <section className="featured-section">
         <h2>Featured Work</h2>
+        
         <div className="featured-grid">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
