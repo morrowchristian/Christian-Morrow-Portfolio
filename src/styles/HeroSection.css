@@ -2,17 +2,30 @@
 
 .hero {
   padding: 4rem 1rem;
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .hero-content {
   max-width: 800px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #555;
 }
 
 .hero-actions {
-  margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -29,11 +42,10 @@
 /* Desktop */
 @media (min-width: 900px) {
   .hero-content {
-    text-align: left;
+    text-align: center;
   }
 
   .hero-actions {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
-
