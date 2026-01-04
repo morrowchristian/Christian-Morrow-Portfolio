@@ -1,29 +1,22 @@
 // src/pages/Home.tsx
-import React from "react";
+import HeroSection from "../components/HeroSection";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import "../styles/Home.css";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
-    <div style={{ padding: "2rem", textAlign: "center" }}>
-      <h1>Welcome to Christian Morrow's Portfolio</h1>
-      <p>Click a project card to view details.</p>
+    <>
+      <HeroSection />
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: "2rem",
-          marginTop: "2rem"
-        }}
-      >
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-    </div>
+      <section className="featured-section">
+        <h2>Featured Work</h2>
+        <div className="featured-grid">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
-
-export default Home;

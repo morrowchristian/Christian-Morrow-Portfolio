@@ -1,0 +1,10 @@
+/* src/styles/Home.css */
+
+.featured-section {
+  padding: 2rem 1rem;
+}
+
+.featured-grid {
+  display: grid;
+  gap: 2rem;
+}
