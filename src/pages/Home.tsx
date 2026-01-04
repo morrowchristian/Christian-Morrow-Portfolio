@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-
       <section className="featured-section">
         <h2>Featured Work</h2>
         <div className="featured-grid">
@@ -20,3 +19,5 @@ const Home = () => {
     </>
   );
 };
+
+export default Home;
