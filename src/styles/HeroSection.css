@@ -3,6 +3,37 @@
 .hero {
   padding: 4rem 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .hero {
+    padding: 6rem 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
