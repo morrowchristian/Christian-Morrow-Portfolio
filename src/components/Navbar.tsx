@@ -29,8 +29,6 @@ export default function Navbar() {
   return (
     <nav className="navbar fade-in">
       <div className="navbar-container">
-        <div className="navbar-brand">Christian Morrow</div>
-
         <button
           className="navbar-toggle"
           onClick={() => setMenuOpen(prev => !prev)}
@@ -49,16 +47,11 @@ export default function Navbar() {
           <a href="#projects" className={active === "projects" ? "active" : ""}>
             Projects
           </a>
-          <a
-            href="#experience"
-            className={active === "experience" ? "active" : ""}
-          >
-            Experience
-          </a>
           <a href="#contact" className={active === "contact" ? "active" : ""}>
             Contact
           </a>
         </div>
+        <a href="/resume.pdf" download className="button"> Download Resume </a> 
       </div>
     </nav>
   );

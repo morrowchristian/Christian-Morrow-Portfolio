@@ -10,17 +10,23 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text);
+  color: var(--text2); /* muted stone gray */
   text-decoration: none;
   font-size: 1rem;
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 .contact-link:hover {
-  color: var(--accent);
+  color: var(--accent); /* muted gold */
 }
 
 .icon {
   width: 20px;
   height: 20px;
+  color: var(--text2); /* ensures icons match text */
+  transition: color var(--transition);
+}
+
+.contact-link:hover .icon {
+  color: var(--accent); /* icon changes with text */
 }
