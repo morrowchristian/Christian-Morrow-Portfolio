@@ -4,10 +4,10 @@
 .footer {
   padding: 2rem;
   text-align: center;
-  color: var(--muted);
+  color: var(--text2); /* muted stone gray */
   border-top: 1px solid var(--border);
   margin-top: 4rem;
-  background: var(--bg);
+  background: var(--footer-bg); /* Ink Black */
   backdrop-filter: blur(6px); /* premium subtle blur */
 }
 
@@ -32,7 +32,7 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--text2); /* muted stone gray */
   font-weight: 500;
   opacity: 0.85;
   transition: var(--transition);
@@ -42,11 +42,12 @@
 .icon {
   width: 1.25rem;
   height: 1.25rem;
+  color: var(--text2);
   transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--accent); /* muted gold */
   opacity: 1;
 }
 
@@ -58,7 +59,7 @@
 /* Meta Text */
 .footer-meta {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--text2); /* muted stone gray */
   line-height: 1.4;
 }
 

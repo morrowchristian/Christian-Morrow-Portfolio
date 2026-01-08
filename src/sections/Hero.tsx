@@ -6,20 +6,15 @@ export default function Hero() {
     <div className="hero">
       <h1>Christian Morrow</h1>
       <p>Full‑Stack Software Engineer</p>
-
-      <div className="hero-buttons">
-        <button
-          onClick={() =>
-            document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          View Projects
-        </button>
-
-        <a href="/resume.pdf" download>
-          <button>Download Resume</button>
-        </a>
-      </div>
+      
+      <button
+        className="hero-button button"
+        onClick={() =>
+          document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+        }
+      >
+        View Projects
+      </button>
     </div>
   );
 }
