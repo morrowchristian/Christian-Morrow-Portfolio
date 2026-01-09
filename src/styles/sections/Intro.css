@@ -1,0 +1,40 @@
+/* src/styles/sections/Intro.css */
+
+.intro-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--space-2xl) var(--space-md);
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.intro-text h1 {
+  font-size: var(--font-size-h1);
+  color: var(--accent);
+}
+
+.intro-text h2 {
+  font-size: var(--font-size-h3);
+  color: var(--text);
+  margin-bottom: var(--space-md);
+}
+
+.intro-text p {
+  font-size: var(--font-size-body);
+  color: var(--text2);
+  margin-bottom: var(--space-lg);
+}
+
+.intro-visual {
+  /* Add image, SVG, or animation here */
+}

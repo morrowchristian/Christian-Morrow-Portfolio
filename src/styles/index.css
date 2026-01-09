@@ -15,8 +15,9 @@ body {
 }
 
 html { 
-  scroll-padding-top: 70px; 
-} 
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+}
 
 html, body {
   width: 100%;

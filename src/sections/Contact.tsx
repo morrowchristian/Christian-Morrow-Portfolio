@@ -4,7 +4,7 @@ import "../styles/sections/Contact.css";
 
 export default function Contact() {
   return (
-    <div className="contact">
+    <div className="contact layout-wrapper">
       <h2>Let’s Get In Touch</h2>
 
       <p>

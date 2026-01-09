@@ -5,7 +5,7 @@ import "../styles/sections/Projects.css";
 
 export default function Projects() {
   return (
-    <div className="projects">
+    <div className="projects layout-wrapper">
       <h2>Featured Work</h2>
 
       <div className="projects-grid">

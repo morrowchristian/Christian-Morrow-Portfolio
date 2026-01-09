@@ -1,6 +1,5 @@
 // src/components/Navbar.tsx
 import { useEffect, useState } from "react";
-import { FiHome } from "react-icons/fi";
 import "../styles/components/Navbar.css";
 
 export default function Navbar() {
@@ -37,22 +36,17 @@ export default function Navbar() {
         >
           ☰
         </button>
-
-        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
-          <a href="hero" className={active === "hero" ? "active" : ""}>
-            <FiHome size={20} />
-          </a>
-          <a href="#about" className={active === "about" ? "active" : ""}>
-            About
-          </a>
-          <a href="#projects" className={active === "projects" ? "active" : ""}>
-            Projects
-          </a>
-          <a href="#contact" className={active === "contact" ? "active" : ""}>
-            Contact
-          </a>
+        <a href='/' className="navbar-name">
+          Christian Morrow
+        </a>
+        <div className="navbar-links">
+          <a href="#intro" className={active === "intro" ? "active" : ""}>About Me</a>
+          <a href="#projects" className={active === "projects" ? "active" : ""}>Projects</a>
+          <a href="#contact" className={active === "contact" ? "active" : ""}>Contact Me</a>
         </div>
-        <a href="/resume.pdf" download className="button"> Download Resume </a> 
+        <a href="/resume.pdf" download className="button navbar-resume"> 
+        Download Resume 
+        </a> 
       </div>
     </nav>
   );

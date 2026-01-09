@@ -1,12 +1,14 @@
 /* src/styles/layout/structure.css */
 
-/* Layout Wrappers */
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
 
-.layout-wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 var(--space-md);
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
 }
 
 .content-width {
@@ -14,13 +16,12 @@
   margin: 0 auto;
 }
 
-/* Global Section Spacing */
-
-section {
-  padding: var(--space-2xl) var(--space-md);
+.layout-wrapper {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
-
-/* Reveal Animation */
 
 .reveal {
   opacity: 0;
