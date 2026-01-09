@@ -1,14 +1,14 @@
-/* src/styles/Projects.css */
+/* src/styles/sections/Projects.css */
 
 .projects {
+  color: var(--text);
   text-align: center;
-  color: var(--text); /* warm white for headings */
 }
 
 .projects h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--text); /* strong contrast */
+  color: var(--text);
   font-weight: 700;
 }
 

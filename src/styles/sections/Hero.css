@@ -1,0 +1,27 @@
+/* src/styles/sections/Hero.css */
+
+.hero {
+  text-align: left;
+  color: var(--text);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.hero-button {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}

@@ -1,0 +1,20 @@
+/* src/styles/sections/Contact.css */
+
+.contact {
+  text-align: center;
+  color: var(--text);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.contact p {
+  color: var(--text2);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
