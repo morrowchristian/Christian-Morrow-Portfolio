@@ -21,9 +21,10 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 };
 
 /* TODO (SectionHeader)
-- Add decorative underline or accent bar
+- Add decorative underline or accent bar variant
 - Add animation on scroll (fade/slide)
-- Add responsive typography scaling
-- Add optional icon support
-- Add variant for small/compact headers
+- Add responsive typography scaling using tokens
+- Add optional icon support (left or above title)
+- Add compact/small variant for tight layouts
+- Add dark/light theme adjustments if theme system is added later
 */
