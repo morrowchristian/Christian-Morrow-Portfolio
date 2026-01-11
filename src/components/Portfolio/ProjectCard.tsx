@@ -50,3 +50,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     </div>
   );
 };
+
+/* TODO (ProjectCard)
+- Add hover animation (scale, shadow, lift)
+- Add skeleton loading state for images
+- Add responsive image aspect ratios
+- Add tech tag color variants
+- Add optional “featured” badge
+*/

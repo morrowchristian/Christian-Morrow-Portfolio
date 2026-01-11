@@ -26,3 +26,10 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     </div>
   );
 };
+
+/* TODO (Modal)
+- Add fade/scale animations
+- Add ESC key to close
+- Add scroll lock on body
+- Add responsive modal width (sm/md/lg)
+*/

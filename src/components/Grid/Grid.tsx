@@ -1,4 +1,4 @@
-// src/components/layout/Grid.tsx
+// src/components/Grid/Grid.tsx
 import React, { forwardRef } from "react";
 import "./Grid.css";
 
@@ -21,3 +21,10 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(
     );
   }
 );
+
+/* TODO (Grid)
+- Add responsive column presets (1col, 2col, 3col)
+- Add spacing tokens (sm/md/lg)
+- Add “centered” or “justified” variants
+- Add animation staggering helpers
+*/

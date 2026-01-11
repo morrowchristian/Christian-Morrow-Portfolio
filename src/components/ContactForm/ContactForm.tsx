@@ -40,12 +40,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
 
-      // Trigger modal close if provided
       setTimeout(() => {
         onSuccess?.();
         setStatus("idle");
       }, 1500);
-    } catch (err) {
+    } catch {
       setStatus("error");
     }
   };
@@ -121,3 +120,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
     </form>
   );
 };
+
+/* TODO (ContactForm)
+- Add responsive layout (2-column on desktop)
+- Add validation UI (invalid states, inline errors)
+- Add success animation or confetti burst
+- Add loading spinner instead of text
+- Add keyboard accessibility improvements
+*/

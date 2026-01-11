@@ -20,6 +20,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         <h3 className="experience-item__role">{role}</h3>
         <span className="experience-item__dates">{dates}</span>
       </div>
+
       <p className="experience-item__company">{company}</p>
 
       <ul className="experience-item__bullets">
@@ -30,3 +31,10 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
     </div>
   );
 };
+
+/* TODO (ExperienceItem)
+- Add animation staggering for bullet list
+- Add timeline connector UI
+- Add responsive spacing + typography
+- Add icons or category tags for roles
+*/

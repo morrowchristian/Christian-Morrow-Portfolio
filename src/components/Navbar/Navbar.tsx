@@ -42,3 +42,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onConnectClick }) => {
     </header>
   );
 };
+
+/* TODO (Navbar)
+- Add mobile menu (hamburger → slide-out)
+- Add active section highlighting
+- Add scroll progress bar
+- Add responsive spacing + typography
+*/

@@ -5,9 +5,11 @@ import type { ResumeExperience, ResumeSkillGroup } from "../../data/resume";
 import { Container } from "../Container/Container";
 import { Grid } from "../Grid/Grid";
 import { useInViewAnimation } from "../../hooks/useInViewAnimation";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export const Resume: React.FC = () => {
   const { ref, isVisible } = useInViewAnimation();
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <section id="resume" className="resume">
@@ -16,10 +18,9 @@ export const Resume: React.FC = () => {
 
         <Grid
           ref={ref}
-          columns="1fr 1fr"
+          columns={isMobile ? "1fr" : "1fr 1fr"}
           className={`animate ${isVisible ? "animate--visible" : ""}`}
         >
-          {/* Experience */}
           <div className="resume__experience">
             {resume.experience.map((item: ResumeExperience) => (
               <div key={item.company} className="resume__item">
@@ -30,7 +31,6 @@ export const Resume: React.FC = () => {
             ))}
           </div>
 
-          {/* Skills */}
           <div className="resume__skills">
             {resume.skills.map((group: ResumeSkillGroup) => (
               <div key={group.title} className="resume__skill-group">
@@ -48,3 +48,11 @@ export const Resume: React.FC = () => {
     </section>
   );
 };
+
+/* TODO (Resume)
+- Add timeline UI for experience section
+- Add skill proficiency bars or categories
+- Add download resume button
+- Add responsive typography scaling
+- Add animation staggering for each resume item
+*/

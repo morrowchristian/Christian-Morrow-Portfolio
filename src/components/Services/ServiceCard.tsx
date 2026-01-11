@@ -20,3 +20,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     </div>
   );
 };
+
+/* TODO (ServiceCard)
+- Add hover animation (lift, glow, tilt)
+- Add icon color variants
+- Add responsive spacing tokens
+- Add optional CTA button per service
+*/

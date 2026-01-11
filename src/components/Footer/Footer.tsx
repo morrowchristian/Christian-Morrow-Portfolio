@@ -2,16 +2,23 @@
 import "./Footer.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useInViewAnimation } from "../../hooks/useInViewAnimation";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { Container } from "../Container/Container";
 
 export const Footer: React.FC = () => {
   const { ref, isVisible } = useInViewAnimation();
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <footer id="footer" className="footer">
-      <div className="footer__inner animate">
+      <Container className="footer__inner animate">
         <div
           ref={ref}
           className={`footer__content ${isVisible ? "animate--visible" : ""}`}
+          style={{
+            flexDirection: isMobile ? "column" : "row",
+            textAlign: isMobile ? "center" : "left",
+          }}
         >
           <div className="footer__left">
             <h3 className="footer__name">Christian Morrow</h3>
@@ -50,7 +57,14 @@ export const Footer: React.FC = () => {
         <div className="footer__divider" />
 
         <p className="footer__credit">Made by Christian Morrow © 2026</p>
-      </div>
+      </Container>
     </footer>
   );
 };
+
+/* TODO (Footer)
+- Add dark/light theme support
+- Add scroll-to-top button
+- Add animated social icons
+- Add responsive spacing tokens
+*/
